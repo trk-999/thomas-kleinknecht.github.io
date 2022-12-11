@@ -1,4 +1,4 @@
-<!-- Light mode for my profolio site -->
+<!-- Dark mode for my profolio site -->
 
 <!DOCTYPE html>
 <html>
@@ -6,15 +6,14 @@
 <title>Thomas's Website </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="232x232" href="android-chrome-192x192.png">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="sheet.css">
-<link rel="icon" type="image/png" sizes="232x232" href="android-chrome-192x192.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
 body, h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif
 }
@@ -23,10 +22,10 @@ body, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 12px
 }
 
-/* This code below will set the width to 120 pixels with an easily dark shade of white background */
+/* This code below will set the width to 120 pixels with a black background */
 .w3-sidebar {
-  width: 120px;background: whitesmoke;
-}
+  width: 120px;background: #222; 
+} 
 
 /* This will add a left margin to the page that will matchup with the sidebar */
 #main {
@@ -36,34 +35,35 @@ body, h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
 </head>
-
-<body class="w3-light-gray">
+<body class="w3-black">
 
 <!-- 
   The icon bar will not be seem on smartphones and other small devies.
   Used and made with help from W3.css to stylize the sidebar 
 -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="index-dark.html"  class="w3-bar-item w3-button w3-padding-large w3-blue">
-    <i style="font-size:54px" class="fa">&#xf186;</i> <!-- Adds a moon icon to indicates to  vistor that there is a dark theme if preferred -->
-    <p>Dark mode </p>
+  <a href="index-light.html"  class="w3-bar-item w3-button w3-padding-large w3-blue">
+    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+      <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+    <p>Light mode </p>
   </a>
   
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
     <i class="fa fa-home w3-xxxlarge"></i>
-    <p>Home </p> <!-- Will return to top of page -->
+    <p>Home</p>
   </a>
   <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
     <i class="fa fa-user w3-xxxlarge"></i>
-    <p>About Me </p> <!-- Links to the about me page with a description of who I am -->
+    <p>About Me </p>
   </a>
   <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
     <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
       <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
     </svg>
-    <p>My Projects </p> <!-- Links to all the projects I have done with source on github -->
+    <p>My Projects </p>
   </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-blue"> <!-- Links to the contacts and social media page -->
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
     <i class="fa fa-envelope w3-xxxlarge"></i>
     <p>Contact me </p>
 
@@ -71,7 +71,7 @@ body, h1, h2, h3, h4, h5, h6 {
     <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
       <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
     </svg>
-    <p>Substack (Writing Blog) </p> <!-- Links to my writing blog which is just to show what else I do besides tech and related. -->
+    <p>Substack (Writing Blog) </p>
   </a>
 </nav>
 
@@ -79,19 +79,19 @@ body, h1, h2, h3, h4, h5, h6 {
 
 <!--This below will create a navigation bar for smartphones and small devices -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <a href="index-dark.html" style="width:25% !important">Dark Mode  </a>
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index-light.html" style="width:25% !important">Light Mode </a>
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home </a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">Anout Me</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">My Projects </a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact Me </a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">About Me</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">My Projects</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact Me</a>
   </div>
 </div>
 
 <!-- Page Content for my profolio -->
 <div class="w3-padding-large" id="main">
-  <!--Will show up as header of the site -->
-  <header class="w3-container w3-padding-32 w3-center w3-grays" id="home">
+ <!--Will show up as header of the site -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-padding-16 w3-text-blue"><span class="w3-hide-small"></span> Thomas Kleinknecht</h1>
     <p class="w3-padding-16 w3-text-aqua">Software Developer</p>
     <div class="pic-view">
@@ -99,8 +99,8 @@ body, h1, h2, h3, h4, h5, h6 {
   </div>
   </header>
 
-  <!-- This below will be the about me section of the site.  -->
-  <div class="w3-content w3-justify w3-text-black w3-padding-64" id="about">
+ <!-- This below will be the about me section of the site.  -->
+  <div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
     <h2 class="w3-text-aqua">About Me </h2>
     <hr style="width:200px" class="w3-opacity">
     <p>Hello there! My name is Thomas Kleinknecht and I am a recent university graduate that is seeking to contribute to the IT world! </p>
@@ -172,14 +172,15 @@ body, h1, h2, h3, h4, h5, h6 {
       Or you can click <a href="https://docs.google.com/document/d/1OtsL4qNmpnquXPezZ0rL-PAHbbCFYBATokpCuywB1x0/edit#">this link </a> to 
       view my resume.  
     </p>
-    
+   
    
   
   <!-- Section for my projects on the site -->
   <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-blue">My Projects </h2>
+    <h2 class="w3-text-light-grey">My Projects </h2>
     <hr style="width:200px" class="w3-opacity">
 
+    
     <!-- Code below places and adjusts the images that have been placed on site -->
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half">
@@ -197,18 +198,18 @@ body, h1, h2, h3, h4, h5, h6 {
   </div>
 
   <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-blue">Projects in development </h2>
+    <h2 class="w3-text-light-grey">Projects in development </h2>
     <hr style="width:200px" class="w3-opacity">
 
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half">
-        <a href="https://github.com/trk-999/david-safarai-adventure"><img src="david.png" style="width:25%"></a>
+        <a href="https://github.com/trk-999/david-safarai-adventure/tree/main"><img src="david.png" style="width:25%"></a>
         <a href="https://github.com/trk-999/new-york-riches"><img src="new-york-riches.png" style="width:25%;"></a>
         
 
-  <!-- Begins the contact section for the profolio -->
+ <!-- Begins the contact section for the profolio -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-blue">Contact Me</h2>
+    <h2 class="w3-text-light-grey">Contact Me</h2>
     <hr style="width:200px" class="w3-opacity">
 
     <div class="w3-section">
@@ -219,7 +220,7 @@ body, h1, h2, h3, h4, h5, h6 {
     <p>Want to reach out? Click the email icon below to open a link to send an email <a href="mailto:trk610@yahoo.com">or send an email directly to me.</a></p>
 
    
-  <!-- Ends the contact section for my profolio -->
+    <!-- Ends the contact section for my profolio -->
   </div>
   
     <!-- This is the ending section of content for my profolio  -->
