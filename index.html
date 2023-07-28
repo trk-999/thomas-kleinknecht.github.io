@@ -1,261 +1,366 @@
-<!-- Light mode for my profolio site -->
+  <!-- Light mode for my profolio site -->
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Thomas's Website </title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="sheet.css">
-<link rel="icon" type="image/png" sizes="232x232" href="android-chrome-192x192.png">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Thomas's Website </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="sheet.css">
+  <link rel="icon" type="image/png" sizes="232x232" href="android-chrome-192x192.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
 
-body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif
-}
+  body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif
+  }
 
-.w3-row-padding img {
-  margin-bottom: 12px
-}
+  .w3-row-padding img {
+    margin-bottom: 12px
+  }
 
-/* This code below will set the width to 120 pixels with an easily dark shade of white background */
-.w3-sidebar {
-  width: 120px;background: whitesmoke;
-}
+  /* This code below will set the width to 120 pixels with an easily dark shade of white background */
+  .w3-sidebar {
+    width: 120px;background: whitesmoke;
+  }
 
-/* This will add a left margin to the page that will matchup with the sidebar */
-#main {
-  margin-left: 120px
-}
-/* This will remove margins from "page content" on small screens such as smartphones and tablets */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+  /* This will add a left margin to the page that will matchup with the sidebar */
+  #main {
+    margin-left: 120px
+  }
+  /* This will remove margins from "page content" on small screens such as smartphones and tablets */
+  @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+  .w3-animate-opacity {
+    animation: fadeInOpacity 1.5s;
+  }
+
+  .header-text {
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #00a1ff, #0046ff);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Add an animation for the header text */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  /* Add a class to trigger the animation */
+  .animate-slide-in {
+    animation: slideIn 1s;
+  }
+
+  <style>
+  /* Add custom styles for the "About Me" section */
+  #about {
+    background-color: #f9f9f9;
+    padding: 40px;
+  }
+
+  /* Style the "Education" and "Experience" sections */
+  .education-experience {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .education-experience .section {
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .education-experience .section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Style the section headings */
+  .section-heading {
+    font-size: 24px;
+    color: #007bff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  /* Style the text inside the sections */
+  .section-text {
+    font-size: 16px;
+    color: #333;
+  }
+
+  .download-button {
+    background-color: #4285F4;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .download-button:hover {
+    background-color: white;
+  }
+  
 </style>
-</head>
 
-<body class="w3-light-gray">
 
-<!-- 
-  The icon bar will not be seem on smartphones and other small devies.
-  Used and made with help from W3.css to stylize the sidebar 
--->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="index-dark.html"  class="w3-bar-item w3-button w3-padding-large w3-blue">
-    <i style="font-size:54px" class="fa">&#xf186;</i> <!-- Adds a moon icon to indicates to  vistor that there is a dark theme if preferred -->
-    <p>Dark mode </p>
-  </a>
+  </style>
+  </head>
+
+  <body class="w3-light-gray">
+
+  <!-- 
+    The icon bar will not be seem on smartphones and other small devies.
+    Used and made with help from W3.css to stylize the sidebar 
+  -->
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-green">
+      <i class="fa fa-home w3-xxxlarge"></i>
+      <p>Home</p> <!-- Will return to top of page -->
+    </a>
   
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
-    <i class="fa fa-home w3-xxxlarge"></i>
-    <p>Home </p> <!-- Will return to top of page -->
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
-    <i class="fa fa-user w3-xxxlarge"></i>
-    <p>About Me </p> <!-- Links to the about me page with a description of who I am -->
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
-    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
-      <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
-    </svg>
-    <p>My Projects </p> <!-- Links to all the projects I have done with source on github -->
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-blue"> <!-- Links to the contacts and social media page -->
-    <i class="fa fa-envelope w3-xxxlarge"></i>
-    <p>Contact me </p>
-
-
-</nav>
-
-
-
-<!--This below will create a navigation bar for smartphones and small devices -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <a href="index-dark.html" style="width:25% !important">Dark Mode  </a>
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home </a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">Anout Me</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">My Projects </a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact Me </a>
-  </div>
-</div>
-
-<!-- Page Content for my profolio -->
-<div class="w3-padding-large" id="main">
-  <!--Will show up as header of the site -->
-  <header class="w3-container w3-padding-32 w3-center w3-grays" id="home">
-    <h1 class="w3-padding-16 w3-text-blue"><span class="w3-hide-small"></span> Thomas Kleinknecht</h1>
-    <p class="w3-padding-16 w3-text-aqua">Software Developer</p>
-    <div class="pic-view">
-      <img class="picture" src="ThomasK.jpg" alt="Thomas Kleinknecht Picture">
-  </div>
-  </header>
-
-  <!-- This below will be the about me section of the site.  -->
-  <div class="w3-content w3-justify w3-text-black w3-padding-64" id="about">
-    <h2 class="w3-text-aqua">About Me </h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>Hello there! My name is Thomas Kleinknecht and I am a recent university graduate that is seeking to contribute to the IT world! </p>
-
-    <p>   Want to reach out? Click the contact me link on the navigation bar to get my email address! </p>
-    </p>
-
-    <h3 class="w3-padding-16 w3-text-blue">My Education </h3>
-    <p class="w3-wide"><img src="uncp.png"> University of North Carolina at Pembroke </p>
-    <div class="w3-black">
-    </div>
-    
-    
-    <div class="w3-row w3-center w3-padding-6 w3-section w3-gray">
-      <div class="w3-quarter w3-section">
-        <span class="w3-large">Bachelor of Science </span><br>
-        <hr class="gold">
-        Degree
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-large">Location  </span><br>
-        <hr class="gold">
-        Pembroke, NC
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-large">Years  </span><br>
-        <hr class="gold">
-        August 2018  -   May 2022
-
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-large">Degree </span><br>
-        <hr class="gold">
-       Information Technology
-      </div>
-    </div>
-    <h3 class="w3-padding-16 w3-text-blue">My Experiences </h3>
-    <p class="w3-wide"><img src="grover.png"> Grover Gaming </p>
-    <div class="w3-white">
-    </div>
-    
-    
-    <div class="w3-row w3-center w3-padding-6 w3-section w3-gray">
-      <div class="w3-quarter w3-section">
-        <span class="w3-large">Deployment Support </span><br>
-        <hr class="blue">
-        Job Title
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-large">Location  </span><br>
-        <hr class="blue">
-        Greenville, NC
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-large">Employment History  </span><br>
-        <hr class="blue">
-        July 11, 2022,  -   Present 
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-large">Programming experience </span><br>
-        <hr class="blue">
-        SQL
-      </div>
-    </div>
-
-    <p class="w3-wide"> Belk / UNITED ELECTRONIC SERVICES, INC.  </p>
-    <div class="w3-row w3-center w3-padding-6 w3-section w3-gray">
-      <div class="w3-quarter w3-section">
-        <span class="w3-large">PC Maintenance Technician </span><br>
-        <hr class="blue">
-        Job Title
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-large">Location  </span><br>
-        <hr class="blue">
-        Greenville, NC
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-large"> History  </span><br>
-        <hr class="blue">
-        July 31, 2023,  -   Present
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-large"> Skills and Experience </span><br>
-        <hr class="blue">
-        Computer Hardware Troubleshooting, Technical Support, Computer Maintenance
-      </div>
-    </div>
-    
-    <button class="w3-button w3-grey w3-padding-large w3-section">
-    <a href="Resume.pdf" target="_blank"><i class="fa fa-download"></i> Clich here to download my Resume </a>
-    </button>
-    <p>
-      Or you can click <a href="https://docs.google.com/document/d/1OtsL4qNmpnquXPezZ0rL-PAHbbCFYBATokpCuywB1x0/edit#">this link </a> to 
-      view my resume.  
-    </p>
-    
-   
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-red">
+      <i class="fa fa-user w3-xxxlarge"></i>
+      <p>About Me</p> <!-- Links to the about me page with a description of who I am -->
+    </a>
   
-  <!-- Section for my projects on the site -->
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-blue">My Projects </h2>
-    <hr style="width:200px" class="w3-opacity">
+    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
+      <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+        <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+      </svg>
+      <p>My Projects</p> <!-- Links to all the projects I have done with source on github -->
+    </a>
+  
+    <!-- Blog link and icon -->
+    <a href="blog.html" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
+      <i class="fa fa-pencil w3-xxxlarge"></i>
+      <p>Blog</p> <!-- Links to the 'blog.html' page -->
+    </a>
+  
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-orange"> <!-- Links to the contacts and social media page -->
+      <i class="fa fa-envelope w3-xxxlarge"></i>
+      <p>Contact me</p>
+    </a>
+  
+  </nav>
+  
 
-    <!-- Code below places and adjusts the images that have been placed on site -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <a href="https://github.com/trk-999/bravecyberbank"><img src="CyberBank_logo.png" style="width:25%"></a>
-        <a href="https://github.com/trk-999/BraveCyberBankVersion2"> <img src="bravebank.jpg.png" style="width:25%"></a>
-        <a href="https://github.com/trk-999/Profolio"><img src="Thomas_Kleinknecht.png" style="width:25%"></a>
+
+
+  <!--This below will create a navigation bar for smartphones and small devices -->
+  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+      <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home </a>
+      <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">Anout Me</a>
+      <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">My Projects </a>
+      <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact Me </a>
+    </div>
+  </div>
+
+  <!-- Page Content for my profolio -->
+  <div class="w3-padding-large" id="main">
+    <!--Will show up as header of the site -->
+    <header class="w3-container w3-padding-32 w3-center w3-grays" id="home">
+      <h1 class="w3-padding-16 w3-text-green w3-animate-opacity animate-slide-in header-text">
+        <span class="w3-hide-small">Thomas Kleinknecht</span>
+      </h1>
+      <p class="w3-padding-16 w3-text-red">IT Technician </p>
+      <div class="pic-view">
+        <img class="picture" src="ThomasK.jpg" alt="Thomas Kleinknecht Picture">
       </div>
+    </header>
+    
+
+    <!-- This below will be the about me section of the site.  -->
+    <div class="w3-content w3-justify w3-text-black w3-padding-64" id="about">
+      <h2 class="w3-text-red">About Me </h2>
+      <hr style="width:200px" class="w3-opacity">
+      <p>Hello there! I'm Thomas Kleinknecht, a young and enthusiastic IT technician with a passion for computer software and hardware. I have recently graduated from university and am eager to make a meaningful contribution to the IT world!</p>
+      <p>If you have any questions or want to connect, feel free to reach out to me. Simply click the "Contact Me" link on the navigation bar to get my email address. I look forward to hearing from you!</p>
       
-      <div class="w3-half">
-        <a href="https://github.com/trk-999/updated-profolio"><img src="updated-logo - Copy.png" style="width:25%"></a>
+<br>
+
+    
+      <div class="education-experience">
+        <div class="section">
+          <div class="section-heading">My Education</div>
+          <img src="uncp.png" alt="University of North Carolina at Pembroke">
+          <div class="section-text">
+            <p><strong>University:</strong> University of North Carolina at Pembroke</p>
+            <p><strong>Degree:</strong> Bachelor of Science</p>
+            <p><strong>Location:</strong> Pembroke, NC</p>
+            <p><strong>Years:</strong> August 2018 - May 2022</p>
+            <p><strong>Major:</strong> Information Technology</p>
+          </div>
+        </div>
+    
+        <div class="section">
+          <div class="section-heading">My Experiences</div>
+          <img src="grover.png" alt="Grover Gaming">
+          <div class="section-text">
+            <p><strong>Company:</strong> Grover Gaming</p>
+            <p><strong>Job Title:</strong> Deployment / Technical Support</p>
+            <p><strong>Location:</strong> Greenville, NC</p>
+            <p><strong>Employment History:</strong> July 11, 2022 - February 8, 2023</p>
+            <p><strong>Programming Experience:</strong> SQL</p>
+          </div>
+        </div>
+    
+        <div class="section">
+          <div class="section-heading">My Experiences</div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          
+          <div class="section-text">
+            <p><strong>Company:</strong> Belk / UNITED ELECTRONIC SERVICES, INC.</p>
+            <p><strong>Job Title:</strong> PC Maintenance Technician</p>
+            <p><strong>Location:</strong> Greenville, NC</p>
+            <p><strong>Employment History:</strong> July 31, 2023 - Present</p>
+            <p><strong>Skills and Experience:</strong> Computer Hardware Troubleshooting, Technical Support, Computer Maintenance</p>
+          </div>
+        </div>
       </div>
-    <!-- End the photos for the page -->
     </div>
+
+    <div class="w3-padding-64 w3-content w3-text-black w3-justify" id="about">
+      <!-- ... Your existing content ... -->
+    
+      <div class="w3-center">
+        <a href="Thomas_Kleinknecht_Resume_07_04_23.pdf" target="_blank" download class="download-button w3-animate-opacity">
+          <i class="fa fa-download"></i> Download my Resume
+        </a>
+        <br>
+        <br>
+        <br>
+        <p class="w3-text-grey w3-small">Or you can click 
+          <a href="https://docs.google.com/document/d/1FJR-4WzXM4UpWOkl881Y1V6DiW80rcva9Fep-rOViFs/edit?usp=drive_link" target="_blank">this link</a> to view my resume.</p>
+      </div>
+    </div>
+    
+      
+    
+    
+<!-- Section for my projects on the site -->
+<div class="w3-padding-64 w3-content" id="photos">
+  <h2 class="w3-text-purple">My Software Projects </h2>
+  <hr style="width:200px" class="w3-opacity">
+
+  <!-- Code below places and adjusts the images that have been placed on site -->
+
   <!-- End finished projects for the page -->
+
+  <!-- Start "Plan Pilot" project segment -->
+  <div class="w3-padding-32">
+    <h3 class="w3-text-red">Plan Pilot</h3>
+    <p>Plan Pilot is an extension for Chrome, Firefox, and Edge that helps you manage your daily tasks and goals effectively.</p>
+
+    <div class="w3-row-padding w3-center" style="margin-top: 24px;">
+      <div class="w3-third">
+        <a href="https://chrome.google.com/webstore/detail/plan-pilot/klcigmgplgkdiabjimhfakakobnibbnk" class="extension-link chrome" target="_blank">
+          <i class="fa fa-chrome" aria-hidden="true"></i>
+          <p>Chrome Extension</p>
+        </a>
+      </div>
+      <div class="w3-third">
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/plan-pilot/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" class="extension-link firefox" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M503.52,241.48c-.12-1.56-.24-3.12-.24-4.68v-.12l-.36-4.68v-.12a245.86,245.86,0,0,0-7.32-41.15c0-.12,0-.12-.12-.24l-1.08-4c-.12-.24-.12-.48-.24-.6-.36-1.2-.72-2.52-1.08-3.72-.12-.24-.12-.6-.24-.84-.36-1.2-.72-2.4-1.08-3.48-.12-.36-.24-.6-.36-1-.36-1.2-.72-2.28-1.2-3.48l-.36-1.08c-.36-1.08-.84-2.28-1.2-3.36a8.27,8.27,0,0,0-.36-1c-.48-1.08-.84-2.28-1.32-3.36-.12-.24-.24-.6-.36-.84-.48-1.2-1-2.28-1.44-3.48,0-.12-.12-.24-.12-.36-1.56-3.84-3.24-7.68-5-11.4l-.36-.72c-.48-1-.84-1.8-1.32-2.64-.24-.48-.48-1.08-.72-1.56-.36-.84-.84-1.56-1.2-2.4-.36-.6-.6-1.2-1-1.8s-.84-1.44-1.2-2.28c-.36-.6-.72-1.32-1.08-1.92s-.84-1.44-1.2-2.16a18.07,18.07,0,0,0-1.2-2c-.36-.72-.84-1.32-1.2-2s-.84-1.32-1.2-2-.84-1.32-1.2-1.92-.84-1.44-1.32-2.16a15.63,15.63,0,0,0-1.2-1.8L463.2,119a15.63,15.63,0,0,0-1.2-1.8c-.48-.72-1.08-1.56-1.56-2.28-.36-.48-.72-1.08-1.08-1.56l-1.8-2.52c-.36-.48-.6-.84-1-1.32-1-1.32-1.8-2.52-2.76-3.72a248.76,248.76,0,0,0-23.51-26.64A186.82,186.82,0,0,0,412,62.46c-4-3.48-8.16-6.72-12.48-9.84a162.49,162.49,0,0,0-24.6-15.12c-2.4-1.32-4.8-2.52-7.2-3.72a254,254,0,0,0-55.43-19.56c-1.92-.36-3.84-.84-5.64-1.2h-.12c-1-.12-1.8-.36-2.76-.48a236.35,236.35,0,0,0-38-4H255.14a234.62,234.62,0,0,0-45.48,5c-33.59,7.08-63.23,21.24-82.91,39-1.08,1-1.92,1.68-2.4,2.16l-.48.48H124l-.12.12.12-.12a.12.12,0,0,0,.12-.12l-.12.12a.42.42,0,0,1,.24-.12c14.64-8.76,34.92-16,49.44-19.56l5.88-1.44c.36-.12.84-.12,1.2-.24,1.68-.36,3.36-.72,5.16-1.08.24,0,.6-.12.84-.12C250.94,20.94,319.34,40.14,367,85.61a171.49,171.49,0,0,1,26.88,32.76c30.36,49.2,27.48,111.11,3.84,147.59-34.44,53-111.35,71.27-159,24.84a84.19,84.19,0,0,1-25.56-59,74.05,74.05,0,0,1,6.24-31c1.68-3.84,13.08-25.67,18.24-24.59-13.08-2.76-37.55,2.64-54.71,28.19-15.36,22.92-14.52,58.2-5,83.28a132.85,132.85,0,0,1-12.12-39.24c-12.24-82.55,43.31-153,94.31-170.51-27.48-24-96.47-22.31-147.71,15.36-29.88,22-51.23,53.16-62.51,90.36,1.68-20.88,9.6-52.08,25.8-83.88-17.16,8.88-39,37-49.8,62.88-15.6,37.43-21,82.19-16.08,124.79.36,3.24.72,6.36,1.08,9.6,19.92,117.11,122,206.38,244.78,206.38C392.77,503.42,504,392.19,504,255,503.88,250.48,503.76,245.92,503.52,241.48Z"/></svg>
+          <p>Firefox Extension</p>
+        </a>
+      </div>
+      <div class="w3-third">
+        <a href="https://microsoftedge.microsoft.com/addons/detail/plan-pilot/emdajpglpmhjilfnlaolhpfkodfdhlkn" class="extension-link edge" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M481.92,134.48C440.87,54.18,352.26,8,255.91,8,137.05,8,37.51,91.68,13.47,203.66c26-46.49,86.22-79.14,149.46-79.14,79.27,0,121.09,48.93,122.25,50.18,22,23.8,33,50.39,33,83.1,0,10.4-5.31,25.82-15.11,38.57-1.57,2-6.39,4.84-6.39,11,0,5.06,3.29,9.92,9.14,14,27.86,19.37,80.37,16.81,80.51,16.81A115.39,115.39,0,0,0,444.94,322a118.92,118.92,0,0,0,58.95-102.44C504.39,176.13,488.39,147.26,481.92,134.48ZM212.77,475.67a154.88,154.88,0,0,1-46.64-45c-32.94-47.42-34.24-95.6-20.1-136A155.5,155.5,0,0,1,203,215.75c59-45.2,94.84-5.65,99.06-1a80,80,0,0,0-4.89-10.14c-9.24-15.93-24-36.41-56.56-53.51-33.72-17.69-70.59-18.59-77.64-18.59-38.71,0-77.9,13-107.53,35.69C35.68,183.3,12.77,208.72,8.6,243c-1.08,12.31-2.75,62.8,23,118.27a248,248,0,0,0,248.3,141.61C241.78,496.26,214.05,476.24,212.77,475.67Zm250.72-98.33a7.76,7.76,0,0,0-7.92-.23,181.66,181.66,0,0,1-20.41,9.12,197.54,197.54,0,0,1-69.55,12.52c-91.67,0-171.52-63.06-171.52-144A61.12,61.12,0,0,1,200.61,228,168.72,168.72,0,0,0,161.85,278c-14.92,29.37-33,88.13,13.33,151.66,6.51,8.91,23,30,56,47.67,23.57,12.65,49,19.61,71.7,19.61,35.14,0,115.43-33.44,163-108.87A7.75,7.75,0,0,0,463.49,377.34Z"/></svg>
+          <p>Edge Extension</p>
+        </a>
+        <br>
+        <br>
+      </div>
+    </div>
   </div>
+  <!-- End "Plan Pilot" project segment -->
 
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-blue">Projects in development </h2>
-    <hr style="width:200px" class="w3-opacity">
+  <br>
+  <br>
+  <h3 class="w3-text-blue">Other Software Projects </h3>
+  <hr style="width:200px" class="w3-opacity">
+  <div class="w3-row-padding" style="margin: 0 -16px">
+    <div class="w3-half">
+      <a href="https://github.com/trk-999/bravecyberbank"><img src="CyberBank_logo.png" style="width:25%"></a>
+      <a href="https://github.com/trk-999/BraveCyberBankVersion2"> <img src="bravebank.jpg.png" style="width:25%"></a>
+      <a href="https://github.com/trk-999/Profolio"><img src="Thomas_Kleinknecht.png" style="width:25%"></a>
+    </div>
 
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <a href="https://github.com/trk-999/david-safarai-adventure"><img src="david.png" style="width:25%"></a>
-        <a href="https://github.com/trk-999/new-york-riches"><img src="new-york-riches.png" style="width:25%;"></a>
-        
-
-  <!-- Begins the contact section for the profolio -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-blue">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-blue w3-xxlarge w3-margin-right"></i> Greenville, NC</p>
-      <p><i class="fa fa-phone fa-fw w3-text-blue w3-xxlarge w3-margin-right"></i> Phone: 252-939-0940</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-blue w3-xxlarge w3-margin-right"> </i> Email: trk610@yahoo.com</p>
-    </div><br>
-    <p>Want to reach out? Click the email icon below to open a link to send an email <a href="mailto:trk610@yahoo.com">or send an email directly to me.</a></p>
-
-   
-  <!-- Ends the contact section for my profolio -->
+    <div class="w3-half">
+      <a href="https://github.com/trk-999/updated-profolio"><img src="updated-logo - Copy.png" style="width:25%"></a>
+    </div>
+    <!-- End the photos for the page -->
   </div>
-  
-    <!-- This is the ending section of content for my profolio  -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <a href="https://www.facebook.com/thomas.kleinknecht.54"<i class="fa fa-facebook-official w3-hover-opacity" style="color: #4267B2"></i> </a>
-    <a href="https://www.instagram.com/thom.k610/?theme=dark"<i class="fa fa-instagram w3-hover-opacity" style="color:purple"></i> </a>
-    <a href="https://twitter.com/Trk610K"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/in/thomas-kleinknecht/"<i class="fa fa-linkedin w3-hover-opacity"></i> </a>
-    <iconify-icon icon="simple-icons:substack" style="color: orange;"></iconify-icon>
-    <a href="mailto:trk610@yahoo.com"><i class="fa fa-envelope" style="color:steelblue;"></i> </a>
-    <p class="w3-medium">Wanted to return to the home page? <a href="index-light.html"  class="w3-hover-text-white"> Click here</a></p>
-  <!-- The last part of footer. -->
-  </footer>
-
-<!-- Finishes all the content of my profolio -->
 </div>
+<!-- End of the projects section -->
 
-</body>
-</html>
+
+          
+
+    <!-- Begins the contact section for the profolio -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+      <h2 class="w3-text-blue">Contact Me</h2>
+      <hr style="width:200px" class="w3-opacity">
+
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-blue w3-xxlarge w3-margin-right"></i> Greenville, NC</p>
+       
+        <p><i class="fa fa-envelope fa-fw w3-text-blue w3-xxlarge w3-margin-right"> </i> Email: trk610@yahoo.com</p>
+      </div><br>
+      <p>Want to reach out? Click the email icon below to open a link to send an email <a href="mailto:trk610@yahoo.com">or send an email directly to me.</a></p>
+
+    
+    <!-- Ends the contact section for my profolio -->
+    </div>
+    
+    <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+      <h2 class="w3-text-blue">Social Media and Email</h2>
+      <hr style="width: 200px" class="w3-opacity">
+    
+      <a href="https://www.facebook.com/thomas.kleinknecht.54"><i class="fa fa-facebook-official w3-hover-opacity" style="color: #4267B2"></i></a>
+      <a href="https://www.linkedin.com/in/thomas-kleinknecht/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+      <a href="https://aethernexus.substack.com/"><i class="fa fa-newspaper-o w3-hover-opacity" style="color: orange;"></i></a>
+      <!-- GitHub link and icon -->
+      <a href="https://github.com/trk-999" target="_blank"><i class="fa fa-github w3-hover-opacity" style="color: black;"></i></a>
+      <a href="mailto:trk610@yahoo.com"><i class="fa fa-envelope" style="color: steelblue;"></i></a>
+    
+      
+    
+      <p class="w3-medium">Wanted to return to the home page? <a href="index.html" class="w3-hover-text-white"> Click here</a></p>
+    </footer>
+    
+    
+
+
+  <!-- Finishes all the content of my profolio -->
+  </div>
+
+  </body>
+  </html>

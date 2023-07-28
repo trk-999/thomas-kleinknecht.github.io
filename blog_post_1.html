@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog | Thomas's Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="sheet.css">
+  <link rel="icon" type="image/png" sizes="232x232" href="android-chrome-192x192.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Add your custom styles here */
+    .header {
+      text-align: center;
+      padding: 30px;
+      background-color: #f1f1f1;
+      color: #000;
+    }
+    .cool-title {
+      font-size: 36px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      transform: scale(1.5);
+    }
+    /* New Post UI Effect */
+    .new-post {
+      position: relative;
+      background-color: #ffe6e6;
+    }
+    .new-post .new-label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      padding: 4px 8px;
+      transform: rotate(-15deg) translate(-50%, -50%);
+    }
+    .new-post .blast-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: red;
+      font-size: 24px;
+      animation: blastAnimation 0.5s infinite;
+    }
+    @keyframes blastAnimation {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    /* Share Buttons */
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .share-buttons a {
+      margin-right: 10px;
+      font-size: 20px;
+      color: #333;
+    }
+    .share-buttons a:last-child {
+      margin-right: 0;
+    }
+    /* Back to Blog Button */
+    .back-to-blog-button {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body class="w3-light-gray">
+
+<!-- Navigation bar -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="width: 15%;">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-green">
+    <i class="fa fa-home w3-xxxlarge"></i>
+    <p>Homepage</p>
+  </a>
+  <a href="blog.html" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
+    <i class="fa fa-pencil w3-xxxlarge"></i>
+    <p>Blog</p>
+  </a>
+</nav>
+
+<!-- Cool Header -->
+<header class="header">
+  <h1 class="cool-title">Thomas Kleinknecht Blog</h1>
+</header>
+
+<!-- Page Content for the blog -->
+<div class="w3-padding-large" id="main">
+  <div class="w3-content w3-justify w3-text-black">
+    <!-- Blog Post 1 -->
+    <div class="w3-card-4 w3-margin w3-white new-post">
+     
+      <div class="w3-container">
+        <br>
+        <h3><b>What I do other than tech..</b></h3>
+        <h5>Published on 07/28/2023</h5>
+      </div>
+      <div class="w3-container">
+        <p>
+          I have a passion for writing and creative storytelling. Besides my tech pursuits, I also love to engage in writing poetry, crafting intriguing short stories, and even recently completed a novel. Writing has become a side passion and hobby that allows me to explore my imagination and share my thoughts with the world.
+        </p>
+        <p>
+          Most of my writing is available on my Substack page, where I regularly publish my works and share my insights. If you're interested in exploring my written creations, feel free to check it out on <a href="https://aethernexus.substack.com/" target="_blank">Substack</a>.
+        </p>
+        <!-- Read More Button -->
+        <div class="back-to-blog-button">
+          <a href="blog.html" class="w3-button w3-red w3-round">Back to Blog</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Add the footer here -->
+
+</body>
+</html>
